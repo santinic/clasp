@@ -3,6 +3,8 @@
 
 (def - (=> (a b) (+ a (* -1 b))))
 
+(def zero? (=> x (eq? x 0)))
+
 (def assert (=> (test)
     (if (not test) (raise "assert failed"))))
 
@@ -30,10 +32,16 @@
     (if (or (eq? n 1) (eq? n 2)) 1
         (+ (fibonacci (- n 1)) (fibonacci (- n 2))))))
 
+(def factorial (=> n
+    (if (zero?  n)
+        1
+        (* n (factorial (- n 1))))))
+
 (assert-equal (- 10 4) 6)
 (assert-equal (+ 1.1 1) 2.1)
 (assert-equal (fibonacci 7) 13)
 (assert-equal (squared 10) 100)
+(assert-equal (factorial 5) 120)
 (assert-equal (len (range 0 10)) 10)
 (assert-equal (sum (range 0 10)) 45)
 (assert-equal (str "hello" " " "world") "hello world")
@@ -45,6 +53,5 @@
     1)
 
 ;;; Python eval
-
 (assert-equal (py "1+1") 2)
 (assert-equal (sum (py "[i for i in range(10)]")) (sum (range 0 10)))
