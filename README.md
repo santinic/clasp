@@ -12,10 +12,9 @@ To run the REPL:
 ~/projects/clasp$ ./clasp.py repl
 Welcome to Clasp REPL
 
-> (sum (range 0 10))
-Function sum not defined.
 > (load "tests.clasp")
 File tests.clasp executed.
+
 > (sum (range 0 10))
 45
 ```
