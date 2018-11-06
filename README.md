@@ -52,5 +52,5 @@ Inspired by this good article by Norvig: http://norvig.com/lispy.html
 ;;; Python eval
 
 (assert-equal (py "1+1") 2)
-(assert-equal (sum (py "[i for i in range(10)]")) (sum (range 0 11)))
+(assert-equal (sum (py "[i for i in range(10)]")) (sum (range 0 10)))
 ```
