@@ -123,7 +123,7 @@ default_env = {
     'eq?': lambda a, b: a == b,
     'procedure?': lambda x: callable(x),
     'raise': raise_function,
-    'py': lambda exp: pyeval(exp[1:-1]),
+    'py': lambda exp: pyeval(exp),
     'load': lambda file: run_file(file)
 }
 
