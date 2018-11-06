@@ -1,7 +1,26 @@
 # clasp
 A scheme-like interpreter written in Python. 
-
 Inspired by this good article by Norvig: http://norvig.com/lispy.html
+
+## Usage
+
+To execute file:
+```$ ./clasp.py tests.clasp```
+
+To run the REPL:
+```
+~/projects/clasp$ ./clasp.py repl
+Welcome to Clasp REPL
+
+> (sum (range 0 10))
+Function sum not defined.
+> (load "tests.clasp")
+File tests.clasp executed.
+> (sum (range 0 10))
+45
+```
+
+## Example
 
 ```scheme
 ; Clasp is a weird scheme by Claudio. 
@@ -54,3 +73,5 @@ Inspired by this good article by Norvig: http://norvig.com/lispy.html
 (assert-equal (py "1+1") 2)
 (assert-equal (sum (py "[i for i in range(10)]")) (sum (range 0 10)))
 ```
+
+
