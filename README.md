@@ -1,5 +1,6 @@
 # clasp
-A scheme-like interpreter written in Python
+A scheme-like interpreter written in Python. 
+Inspired by this good article by Norvig: http://norvig.com/lispy.html
 
 ```scheme
 ; Clasp is a weird scheme by Claudio. 
